@@ -61,12 +61,11 @@
                                                     echo('<table border="0"></table>');
                                                     while($row = $result->fetch_assoc()) {
                                                         echo '<tr>
-                                                            <td><input type="checkbox" name="tensam" value="'.$row['id'].'"/></td>
+                                                            <td><input type="checkbox" name="tensam"/></td>
                                                             <td>'.$row["url"].'</td>
                                                             </tr><br/>';
                                                     }
                                                     echo('</table>');
-
                                                 }
                                             }else
                                             {
@@ -75,7 +74,7 @@
                                     }
                             }
                             if(isset($_GET['deletephp'])){ //deletephp to nazwa buttona
-                                echo($_GET['tensam']);
+
                                 if(isset($_GET['tensam'])){
                                     foreach($_GET['tensam'] as $deleteid){ //tensam to nazwa checkboxa
                                         $deletrecord = "DELETE from rss WHERE id=".$deleteid;

@@ -59,7 +59,7 @@
                                                 $result = $polaczenie->query("SELECT url,id FROM rss ");
                                                 if ($result->num_rows > 0) {
                                                     echo('<table border="0"></table>');
-                                                    while($row = $result->fetch_assoc()) {
+                                                    while($row = $result->mysqli_fetch_array()) {
                                                         echo '<tr>
                                                             <td><input type="checkbox" name="tensam" value="'.$row['id'].'"/></td>
                                                             <td>'.$row["url"].'</td>
